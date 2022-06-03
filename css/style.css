@@ -1,0 +1,109 @@
+
+/*--------
+Font
+----------*/
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/font/Inter-Medium.ttf");
+}
+
+/*--------
+Global
+----------*/
+html {
+  color: black;
+  background-color: #FDFDFD;
+  overflow-x: hidden;
+  font-weight: 500;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  font-variant-numeric: slashed-zero;
+  cursor: crosshair;
+  font-family: "Inter", serif;
+  hyphens: auto;
+  -webkit-hyphenate-character: '-';
+  letter-spacing: -0.04rem;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+::selection {
+  color: black;
+  background: #FFD602;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+/*--------
+Header
+----------*/
+nav {
+  width: 96%;
+  height: 7vh;
+  position: fixed;
+  z-index: 100 !important;
+  border-bottom: 1px solid black;
+  font-size: calc(12px + (35 - 20) * ((100vw - 576px) / (2560 - 576)));
+}
+
+.header {
+  height: 100%;
+  align-content: end;
+}
+
+.index-btn {
+  grid-column: 1;
+  text-align: left;
+  margin-bottom: 2%;
+}
+
+.cool-btn {
+  grid-column: 2;
+  text-align: center;
+}
+
+.cool-btn:hover span {
+  display: none
+}
+
+.cool-btn:hover:before {
+  content: "😳🕶️🤏"
+}
+
+.about-btn {
+  grid-column: 3;
+  text-align: right;
+}
+
+
+
+/*--------
+Index
+----------*/
+.introduction {
+  min-height: 100vh;
+  width: 100%;
+  place-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #000000;
+}
