@@ -132,7 +132,7 @@ Prev and Next buttons
 
 .swiper-button-prev, .swiper-button-next{
   opacity: 1;
-  min-width: 25%;
+  min-width: 50%;
   min-height: 100%;
   top: 0% !important;
   margin-top: 0 !important;
@@ -143,7 +143,7 @@ Prev and Next buttons
   left: 0 !important;
   cursor: w-resize !important;  
   justify-content: start !important;
-  align-items: end !important;
+  align-items: center !important;
 }
 
 .swiper-button-next{
@@ -151,7 +151,7 @@ Prev and Next buttons
   right: 0 !important;
   cursor: e-resize !important;  
   justify-content: end !important;
-  align-items: end !important;
+  align-items: center !important;
 }
 
 /*--------------------
@@ -197,7 +197,7 @@ Temporary Swiper style
 .buttons{
   position: absolute;
   z-index: 10000;
-  top: calc(7vh + 5vh + 16px);
+  bottom: calc(5vh + 32px);
   left: calc(3% + 32px);
 }
 
@@ -235,4 +235,18 @@ Temporary Swiper style
 .buttons:hover > div:hover{
   opacity: 1;
   cursor: pointer;
+}
+
+.button-random-color{
+  background-color: var(--color3) !important;
+}
+
+.button-bw{
+  background-color: black !important;
+}
+
+.button-random-color, .button-swap, .button-bw{
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
 }
