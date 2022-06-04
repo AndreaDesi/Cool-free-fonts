@@ -10,7 +10,11 @@ Font
 /*--------
 Global
 ----------*/
+
 html {
+  --color1: black;
+  --color2: white;
+  --color3: red;
   color: black;
   background-color: #FDFDFD;
   overflow-x: hidden;
@@ -115,7 +119,120 @@ Content
   width: 100%;
   place-items: center;
   top: 0;
-  background-color: red;
   margin-top: 5vh;
   margin-bottom: 5vh;
+  color: var(--color1);
+  background-color: var(--color2);
+  border: 1px solid black;
+}
+
+/*--------------------
+Prev and Next buttons
+--------------------*/
+
+.swiper-button-prev, .swiper-button-next{
+  opacity: 1;
+  min-width: 25%;
+  min-height: 100%;
+  top: 0% !important;
+  margin-top: 0 !important;
+  content: "" !important;
+}
+
+.swiper-button-prev{
+  left: 0 !important;
+  cursor: w-resize !important;  
+  justify-content: start !important;
+  align-items: end !important;
+}
+
+.swiper-button-next{
+  justify-content: end;
+  right: 0 !important;
+  cursor: e-resize !important;  
+  justify-content: end !important;
+  align-items: end !important;
+}
+
+/*--------------------
+Temporary Swiper style
+--------------------*/
+
+
+
+.swiper-wrapper{
+  align-items: flex-end;
+}
+
+.swiper-slide{
+  font-size: 96px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next:after{
+  content: "→" !important;
+  color: var(--color1);
+  text-shadow:
+   -1px -1px 0 var(--color2),  
+    1px -1px 0 var(--color2),  
+    -1px 1px 0 var(--color2),  
+     1px 1px 0 var(--color2);
+  margin: 0 32px 32px 0;
+}
+
+.swiper-button-prev:after{
+  content: "←" !important;
+  color: var(--color1);
+  text-shadow:
+   -1px -1px 0 var(--color2),  
+    1px -1px 0 var(--color2),  
+    -1px 1px 0 var(--color2),  
+     1px 1px 0 var(--color2);
+  margin: 0 0 32px 32px;
+}
+
+.buttons{
+  position: absolute;
+  z-index: 10000;
+  top: calc(7vh + 5vh + 16px);
+  left: calc(3% + 32px);
+}
+
+.inv{
+  color: var(--color2) !important;
+  background-color: var(--color1) !important;
+}
+
+.right{
+  color: var(--color1);
+  background-color: var(--color2);
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 120px;
+  margin-top: 16px;
+  grid-column-gap: 8px;
+}
+
+.buttons > div{
+  width: auto;
+  border: 1px solid black;
+  white-space: nowrap;
+  padding: 8px 16px;
+  color: var(--color1);
+  background-color: var(--color2);
+}
+
+.buttons:hover > div{
+  opacity: 0.2;
+}
+
+.buttons:hover > div:hover{
+  opacity: 1;
+  cursor: pointer;
 }
