@@ -28,8 +28,6 @@ html {
   font-variant-numeric: slashed-zero;
   cursor: crosshair;
   font-family: "Inter", serif;
-  hyphens: auto;
-  -webkit-hyphenate-character: '-';
   letter-spacing: -0.04rem;
   margin-left: 3%;
   margin-right: 3%;
@@ -128,6 +126,14 @@ nav {
   text-align: right;
 }
 
+.about-text {
+  font-family: "Inter Medium", serif;
+}
+
+.about-contacts {
+  font-family: "Inter Medium", serif;
+}
+
 .about-contacts > div > p{
   margin: 16px 0 0 0;
 }
@@ -149,15 +155,10 @@ Selectors
 ----------*/
 .selectors {
   margin-top: 5vh;
-  display: flex;
 }
 
 .selectors-dim{
   opacity: 0.4 !important;
-}
-
-.selectors-licence {
-  margin-left: 5%;
 }
 
 button, input[type="submit"], input[type="reset"] {
@@ -177,12 +178,13 @@ button, input[type="submit"], input[type="reset"] {
 Font Grid
 ----------*/
 .font-grid {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 5vh;
   margin-bottom: 5vh;
   border-top: 1px solid black;
-border-left: 1px solid black;
+  border-left: 1px solid black;
 
 }
 
@@ -259,7 +261,6 @@ Content
   margin-bottom: 5vh;
   color: var(--color1);
   background-color: var(--color2);
-  border: 1px solid black;
 }
 
 
@@ -348,14 +349,13 @@ BW, random, switch, download buttons
   font-size: 28px;
   line-height: 28px;
   user-select: none;
-  border: 1px solid;
   width: auto;
   white-space: nowrap;
-  background-color: var(--color2);
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  mix-blend-mode: difference;
 }
 
 .buttons:hover > button{
@@ -369,24 +369,17 @@ BW, random, switch, download buttons
 }
 
 .rand-btn{
-  background-color: var(--color2) !important;
-  border: 1px solid var(--color1) !important;
 }
 
 .bw-btn{
-  border-right-color: black !important;
-  border-bottom-color: black !important;
-  border-top-color: white !important;
-  border-left-color: white !important;
-  background: linear-gradient(135deg, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%);
 }
 
 .rand-btn, .swap-btn, .bw-btn{
   height: 48px;
   aspect-ratio: 1;
   border-radius: 100%;
-  color: var(--color1);
   margin: 0 !important;
+  mix-blend-mode: difference;
 }
 
 .download-btn{

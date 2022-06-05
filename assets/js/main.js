@@ -56,7 +56,7 @@ $(document).ready(function(){
   $('.about-text, .about-contacts').fadeOut(0);
 })
 
-$('.about-btn').click(function(){  
+$('.about-btn').click(function(){
   $('nav').toggleClass('nav-extend');
   $('.about-text, .about-contacts').fadeToggle('fast');
 })
@@ -82,7 +82,7 @@ $('.swap-btn').click(function(){
 //random color
 $('.rand-btn').click(function(){
   let hue = randomInt(0, 255);
-  
+
   $('html').css('--color2', 'hsl('+hue+', 100%, 80%)').css('--color3', 'var(--color2)');
 });
 
