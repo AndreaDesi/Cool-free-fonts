@@ -75,7 +75,7 @@ nav {
   height: 7vh;
   z-index: 10000 !important;
   border-bottom: 1px solid black;
-  font-size: calc(12px + (35 - 20) * ((100vw - 576px) / (2560 - 576)));
+  font-size: calc(16px + (25 - 16) * ((100vw - 576px) / (2560 - 576)));
   transition: height 0.4s;
 }
 
@@ -185,7 +185,6 @@ Font Grid
   margin-bottom: 5vh;
   border-top: 1px solid black;
   border-left: 1px solid black;
-
 }
 
 .block {
@@ -406,3 +405,21 @@ BW, random, switch, download buttons
   cursor: pointer;
   transform: rotate(-135deg);
 }
+
+/*----------------------------------
+Responsive
+----------------------------------*/
+@media (max-width: 767px) {
+  /*--------
+  Global
+  ----------*/
+
+  /*--------
+  Index
+  ----------*/
+  .font-grid {
+    display: block;
+    }
+
+
+  }
