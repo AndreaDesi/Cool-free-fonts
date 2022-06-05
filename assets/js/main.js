@@ -1,4 +1,15 @@
-//Filtri homepage
+//Random number function
+
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+$(document).ready(function(){
+  let colore = randomInt(0, 255);
+  $('::selection').css('background', 'hsl('+colore+', 100%, 80%)');
+});
+
+//Filtri front page
 
 $('#serif-btn').click(function(){
   $('.selectors-category > button').addClass('selectors-dim');
@@ -30,12 +41,29 @@ $('#all-btn').click(function(){
 })
 
 
-//Font page
+//Animazioni colori front page
 
-//Random number function
-function randomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
+$('.block').mouseenter(function(){
+  let hue = randomInt(0, 255);
+  $(this).css('background-color', 'hsl('+hue+', 100%, 80%)');
+}).mouseleave(function(){
+  $(this).css('background-color', 'white');
+})
+
+//About
+
+$(document).ready(function(){
+  $('.about-text, .about-contacts').fadeOut(0);
+})
+
+$('.about-btn').click(function(){  
+  $('nav').toggleClass('nav-extend');
+  $('.about-text, .about-contacts').fadeToggle('fast');
+})
+
+
+
+
 
 //Sets --color3 to random number
 $(document).ready(function(){
