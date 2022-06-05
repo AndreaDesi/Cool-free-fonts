@@ -7,6 +7,11 @@ Font
   src: url("../assets/font/Inter-Bold.ttf");
 }
 
+@font-face {
+  font-family: "Inter Medium";
+  src: url("../assets/font/Inter-Medium.ttf");
+}
+
 /*--------
 Global
 ----------*/
@@ -105,7 +110,87 @@ nav {
   text-align: right;
 }
 
+/*--------
+Selectors
+----------*/
+.selectors {
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 5vh;
+  display: flex;
+}
 
+.selectors-licence {
+  margin-left: 5%;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  margin-right: 20px;
+  font-family: "Inter Medium", serif;
+}
+
+
+/*--------
+Font Grid
+----------*/
+.font-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:1px;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.block {
+  box-shadow:0 0 0 1px black;
+  padding: 10%;
+  aspect-ratio: 4/3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 3;
+}
+
+.font-name {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  text-align: center;
+  place-self: center;
+  align-self: start;
+  font-family: "Inter Medium", serif;
+}
+
+.font-text {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+    text-align: center;
+  place-self: center;
+}
+
+
+.font-category {
+  grid-row: 3;
+  grid-column: 1;
+  text-align: left;
+  align-self: end;
+  font-family: "Inter Medium", serif;
+}
+
+.font-licence {
+  grid-row: 3;
+  grid-column: 2;
+  text-align: right;
+  align-self: end;
+  font-family: "Inter Medium", serif;
+}
 
 /*--------
 Content
