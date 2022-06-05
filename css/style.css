@@ -1,4 +1,3 @@
-
 /*--------
 Font
 ----------*/
@@ -38,7 +37,7 @@ html {
 
 ::selection {
   color: black;
-  background: #FFD602;
+  background: var(--color3);
 }
 
 a {
@@ -52,7 +51,7 @@ a:visited {
 }
 
 body {
-  margin: 0;
+  margin: calc(7vh + 3%) 0 0 0;
 }
 
 .grid {
@@ -60,21 +59,36 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 /*--------
 Header
 ----------*/
 nav {
-  width: 100%;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: calc(3% - 2px);
+  width: calc(94% + 4px);
   height: 7vh;
-  z-index: 100 !important;
+  z-index: 10000 !important;
   border-bottom: 1px solid black;
   font-size: calc(12px + (35 - 20) * ((100vw - 576px) / (2560 - 576)));
+  transition: height 0.4s;
+}
+
+.nav-extend{
+  height: 100vh;
 }
 
 .header {
   height: 100%;
-  align-content: end;
+  align-content: start;
+  margin: 3.5vh 0;
 }
 
 .index-btn {
@@ -112,6 +126,22 @@ nav {
 .about-btn {
   grid-column: 3;
   text-align: right;
+}
+
+.about-contacts > div > p{
+  margin: 16px 0 0 0;
+}
+
+.about-contacts > div > ul > li{
+  transition: opacity 0.4s;
+}
+
+.about-contacts > div > ul:hover > li{
+  opacity: 0.4;
+}
+
+.about-contacts > div > ul:hover > li:hover{
+  opacity: 1;
 }
 
 /*--------
@@ -206,7 +236,7 @@ border-left: 1px solid black;
 
 .selectors-category > button {
   opacity: 1;
-  transition: 0.4s;
+  transition: opacity 0.4s;
 }
 
 .selectors-category:hover > button{
@@ -291,13 +321,15 @@ BW, random, switch, download buttons
 .inv{
   color: var(--color2) !important;
   background-color: var(--color1);
-  transition: 0.4s;
+  transition: color 0.4s;
+  transition: background-color 0.4s;
 }
 
 .right{
   color: var(--color1) !important;
   background-color: var(--color2);
-  transition: 0.4s;
+  transition: color 0.4s;
+  transition: background-color 0.4s;
 }
 
 .buttons{
@@ -328,7 +360,7 @@ BW, random, switch, download buttons
 
 .buttons:hover > button{
   opacity: 0.4;
-  transition: 0.4s;
+  transition: opacity 0.4s;
 }
 
 .buttons:hover > button:hover{
@@ -354,6 +386,7 @@ BW, random, switch, download buttons
   aspect-ratio: 1;
   border-radius: 100%;
   color: var(--color1);
+  margin: 0 !important;
 }
 
 .download-btn{
@@ -371,12 +404,10 @@ BW, random, switch, download buttons
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.4s;
+  transition: transform 0.4s;
   font-size: 20px;
   line-height: 20px;
 }
-
-
 
 .download-btn:hover{
   cursor: pointer;
