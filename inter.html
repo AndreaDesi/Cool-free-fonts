@@ -8,6 +8,8 @@
   <link rel="preload" href="assets/font/Inter-Bold.ttf" as="font" type="font/woff" crossorigin>
   <link rel="icon" type="image/png" href="assets/favicon/favicon.png">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  
 </head>
 
 <body>
@@ -27,15 +29,91 @@
   </nav>
 
 <!-- content -->
-  <div class="content">
-    <div class="font-content">
 
+  <div class="content swiper right">
+    <div class="font-content swiper-wrapper">      
+        
+          <!-- Slides -->
+          <div class="swiper-slide">Oh, everything looks bad if you remember it.</div>
+          <div class="swiper-slide">Whoa, slow down there, maestro. There's a *New* Mexico?</div>
+          <div class="swiper-slide">Look out, Itchy! He's Irish!</div>
+      
     </div>
+    <!-- Nav buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    
+    
   </div>
 
 
+  <!-- Color buttons -->
+  <div class="buttons">
+    <div class="button-bw"></div>
+    <div class="button-random-color"></div>
+    <div class="button-swap">⇄</div>
+  </div>
+
   <!-- main js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+
+    spaceBetween: 30,
+
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  
+
+function randomInt(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+$(document).ready(function(){
+  let colore = randomInt(0, 255);
+  $('html').css('--color3', 'hsl('+colore+', 100%, 80%)');
+});
+
+
+//swap colors
+$('.button-swap').click(function(){
+  if ($('.content').hasClass('right')) {
+    $('.content').removeClass('right').addClass('inv');
+  } else {
+    $('.content').removeClass('inv').addClass('right');
+  }
+});
+
+//random color
+$('.button-random-color').click(function(){
+  let hue = randomInt(0, 255);
+  
+  $('html').css('--color2', 'hsl('+hue+', 100%, 80%)').css('--color3', 'var(--color2)');
+});
+
+//reset black and white
+$('.button-bw').click(function(){
+  let hue = randomInt(0, 255);
+  if ($('.content').hasClass('inv')) {
+    $('.content').removeClass('inv').addClass('right');
+  }
+  $('html').css('--color2', 'white').css('--color3', 'hsl('+ hue +', 100%, 80%)');;
+});
+
+
+  </script>
 </body>
 
 </html>
+
