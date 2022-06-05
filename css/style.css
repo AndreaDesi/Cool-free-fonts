@@ -226,7 +226,7 @@ Prev and Next buttons
 
 .swiper-button-prev{
   left: 0 !important;
-  cursor: w-resize !important;  
+  cursor: w-resize !important;
   justify-content: start !important;
   align-items: center !important;
 }
@@ -234,7 +234,7 @@ Prev and Next buttons
 .swiper-button-next{
   justify-content: end;
   right: 0 !important;
-  cursor: e-resize !important;  
+  cursor: e-resize !important;
   justify-content: end !important;
   align-items: center !important;
 }
@@ -261,9 +261,9 @@ Temporary Swiper style
   content: "→" !important;
   color: var(--color1);
   text-shadow:
-   -1px -1px 0 var(--color2),  
-    1px -1px 0 var(--color2),  
-    -1px 1px 0 var(--color2),  
+   -1px -1px 0 var(--color2),
+    1px -1px 0 var(--color2),
+    -1px 1px 0 var(--color2),
      1px 1px 0 var(--color2);
   margin: 0 32px 32px 0;
 }
@@ -272,9 +272,9 @@ Temporary Swiper style
   content: "←" !important;
   color: var(--color1);
   text-shadow:
-   -1px -1px 0 var(--color2),  
-    1px -1px 0 var(--color2),  
-    -1px 1px 0 var(--color2),  
+   -1px -1px 0 var(--color2),
+    1px -1px 0 var(--color2),
+    -1px 1px 0 var(--color2),
      1px 1px 0 var(--color2);
   margin: 0 0 32px 32px;
 }
