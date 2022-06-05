@@ -118,10 +118,12 @@ nav {
 Selectors
 ----------*/
 .selectors {
-  margin-left: 3%;
-  margin-right: 3%;
   margin-top: 5vh;
   display: flex;
+}
+
+.selectors-dim{
+  opacity: 0.4 !important;
 }
 
 .selectors-licence {
@@ -148,8 +150,6 @@ Font Grid
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap:1px;
-  margin-left: 3%;
-  margin-right: 3%;
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
@@ -196,6 +196,19 @@ Font Grid
   font-family: "Inter Medium", serif;
 }
 
+.selectors-category > button {
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.selectors-category:hover > button{
+  opacity: 0.4;
+}
+
+.selectors-category:hover > button:hover{
+  opacity: 1 !important;
+}
+
 /*--------
 Content
 ----------*/
@@ -222,12 +235,15 @@ Prev and Next buttons
   min-height: 100%;
   top: 0% !important;
   margin-top: 0 !important;
-  content: "" !important;
+  font-size: 32px;
+  margin: 32px;
+  background-color: transparent !important;
+  user-select: none;
 }
 
 .swiper-button-prev{
   left: 0 !important;
-  cursor: w-resize !important;
+  cursor: w-resize !important;  
   justify-content: start !important;
   align-items: center !important;
 }
@@ -235,16 +251,14 @@ Prev and Next buttons
 .swiper-button-next{
   justify-content: end;
   right: 0 !important;
-  cursor: e-resize !important;
+  cursor: e-resize !important;  
   justify-content: end !important;
   align-items: center !important;
 }
 
-/*--------------------
-Temporary Swiper style
---------------------*/
-
-
+/*----------
+Swiper style
+----------*/
 
 .swiper-wrapper{
   align-items: flex-end;
@@ -258,46 +272,31 @@ Temporary Swiper style
   justify-content: center;
 }
 
-.swiper-button-next:after{
-  content: "→" !important;
-  color: var(--color1);
-  text-shadow:
-   -1px -1px 0 var(--color2),
-    1px -1px 0 var(--color2),
-    -1px 1px 0 var(--color2),
-     1px 1px 0 var(--color2);
-  margin: 0 32px 32px 0;
+.swiper-button-next:after, .swiper-button-prev:after{
+  content: "" !important;
 }
 
-.swiper-button-prev:after{
-  content: "←" !important;
-  color: var(--color1);
-  text-shadow:
-   -1px -1px 0 var(--color2),
-    1px -1px 0 var(--color2),
-    -1px 1px 0 var(--color2),
-     1px 1px 0 var(--color2);
-  margin: 0 0 32px 32px;
+/*----------------------------------
+BW, random, switch, download buttons
+----------------------------------*/
+
+.inv{
+  color: var(--color2) !important;
+  background-color: var(--color1);
+  transition: 0.4s;
+}
+
+.right{
+  color: var(--color1) !important;
+  background-color: var(--color2);
+  transition: 0.4s;
 }
 
 .buttons{
   position: absolute;
   z-index: 10000;
-  bottom: calc(5vh + 32px);
-  left: calc(3% + 32px);
-}
-
-.inv{
-  color: var(--color2) !important;
-  background-color: var(--color1) !important;
-}
-
-.right{
-  color: var(--color1);
-  background-color: var(--color2);
-}
-
-.buttons{
+  bottom: 32px;
+  left: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 120px;
@@ -305,34 +304,73 @@ Temporary Swiper style
   grid-column-gap: 8px;
 }
 
-.buttons > div{
+.buttons > button{
+  font-size: 28px;
+  line-height: 28px;
+  user-select: none;
+  border: 1px solid;
   width: auto;
-  border: 1px solid black;
   white-space: nowrap;
-  padding: 8px 16px;
-  color: var(--color1);
   background-color: var(--color2);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.buttons:hover > div{
-  opacity: 0.2;
+.buttons:hover > button{
+  opacity: 0.4;
+  transition: 0.4s;
 }
 
-.buttons:hover > div:hover{
+.buttons:hover > button:hover{
   opacity: 1;
   cursor: pointer;
 }
 
-.button-random-color{
-  background-color: var(--color3) !important;
+.rand-btn{
+  background-color: var(--color2) !important; 
+  border: 1px solid var(--color1) !important;
 }
 
-.button-bw{
-  background-color: black !important;
+.bw-btn{
+  border-right-color: black !important;
+  border-bottom-color: black !important;
+  border-top-color: white !important;
+  border-left-color: white !important;
+  background: linear-gradient(135deg, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%);
 }
 
-.button-random-color, .button-swap, .button-bw{
-  height: 16px;
-  width: 16px;
+.rand-btn, .swap-btn, .bw-btn{
+  height: 48px;
+  aspect-ratio: 1;
   border-radius: 100%;
+  color: var(--color1);
+}
+
+.download-btn{
+  user-select: none;
+  color: var(--color1);
+  background-color: var(--color2);
+  position: absolute;
+  z-index: 10000;
+  bottom: 32px;
+  right: 32px;
+  border: 1px solid black;
+  border-radius: 100px;
+  height: 48px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+
+
+.download-btn:hover{
+  cursor: pointer;
+  transform: rotate(-135deg);
 }
