@@ -118,10 +118,12 @@ nav {
 Selectors
 ----------*/
 .selectors {
-  margin-left: 3%;
-  margin-right: 3%;
   margin-top: 5vh;
   display: flex;
+}
+
+.selectors-dim{
+  opacity: 0.4 !important;
 }
 
 .selectors-licence {
@@ -148,8 +150,6 @@ Font Grid
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap:1px;
-  margin-left: 3%;
-  margin-right: 3%;
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
@@ -194,6 +194,19 @@ Font Grid
   text-align: right;
   align-self: end;
   font-family: "Inter Medium", serif;
+}
+
+.selectors-category > button {
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.selectors-category:hover > button{
+  opacity: 0.4;
+}
+
+.selectors-category:hover > button:hover{
+  opacity: 1 !important;
 }
 
 /*--------
@@ -290,7 +303,7 @@ BW, random, switch, download buttons
   grid-column-gap: 8px;
 }
 
-.buttons > div{
+.buttons > button{
   font-size: 28px;
   line-height: 28px;
   user-select: none;
@@ -304,11 +317,12 @@ BW, random, switch, download buttons
   justify-content: center;
 }
 
-.buttons:hover > div{
-  opacity: 0.2;
+.buttons:hover > button{
+  opacity: 0.4;
+  transition: 0.4s;
 }
 
-.buttons:hover > div:hover{
+.buttons:hover > button:hover{
   opacity: 1;
   cursor: pointer;
 }
@@ -335,6 +349,7 @@ BW, random, switch, download buttons
 
 .download-btn{
   user-select: none;
+  color: var(--color1);
   background-color: var(--color2);
   position: absolute;
   z-index: 10000;
@@ -343,16 +358,18 @@ BW, random, switch, download buttons
   border: 1px solid black;
   border-radius: 100px;
   height: 48px;
-  padding: 0 32px;
+  aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.4s;
+  font-size: 20px;
+  line-height: 20px;
 }
 
-.download-btn:after{
-  content: "Download";
-}
+
 
 .download-btn:hover{
   cursor: pointer;
+  transform: rotate(-135deg);
 }

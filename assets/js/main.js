@@ -1,32 +1,32 @@
-/* index */
+//Filtri homepage
+
 $('#serif-btn').click(function(){
-  $('.serif-tag').show();
-  $('.sans-tag').show();
-  $('.mono-tag').show();
+  $('.selectors-category > button').addClass('selectors-dim');
+  $('#serif-btn').removeClass('selectors-dim');
+  $('.block').show();
   $('.sans-tag').hide();
   $('.mono-tag').hide();
 })
 
 $('#sans-btn').click(function(){
-  $('.serif-tag').show();
-  $('.sans-tag').show();
-  $('.mono-tag').show();
+  $('.selectors-category > button').addClass('selectors-dim');
+  $('#sans-btn').removeClass('selectors-dim');
+  $('.block').show();
   $('.serif-tag').hide();
   $('.mono-tag').hide();
 })
 
 $('#mono-btn').click(function(){
-  $('.serif-tag').show();
-  $('.sans-tag').show();
-  $('.mono-tag').show();
+  $('.selectors-category > button').addClass('selectors-dim');
+  $('#mono-btn').removeClass('selectors-dim');
+  $('.block').show();
   $('.serif-tag').hide();
   $('.sans-tag').hide();
 })
 
 $('#all-btn').click(function(){
-  $('.serif-tag').show();
-  $('.sans-tag').show();
-  $('.mono-tag').show();
+  $('.selectors-category > button').removeClass('selectors-dim');
+  $('.block').show();
 })
 
 
