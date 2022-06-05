@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="assets/favicon/favicon.png">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-  
+
 </head>
 
 <body>
@@ -31,28 +31,28 @@
 <!-- content -->
 
   <div class="content swiper right">
-    <div class="font-content swiper-wrapper">      
-        
+    <div class="font-content swiper-wrapper">
+
           <!-- Slides -->
           <div class="swiper-slide">Oh, everything looks bad if you remember it.</div>
           <div class="swiper-slide">Whoa, slow down there, maestro. There's a *New* Mexico?</div>
           <div class="swiper-slide">Look out, Itchy! He's Irish!</div>
-      
+
     </div>
     <!-- Nav buttons -->
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
 
-    
-    
+
+
   </div>
 
 
   <!-- Color buttons -->
   <div class="buttons">
+    <div class="button-swap">↻</div>
     <div class="button-bw"></div>
     <div class="button-random-color"></div>
-    <div class="button-swap">⇄</div>
   </div>
 
   <!-- main js -->
@@ -74,9 +74,9 @@
     },
   });
 
-  
 
-function randomInt(min, max) { // min and max included 
+
+function randomInt(min, max) { // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
@@ -98,7 +98,7 @@ $('.button-swap').click(function(){
 //random color
 $('.button-random-color').click(function(){
   let hue = randomInt(0, 255);
-  
+
   $('html').css('--color2', 'hsl('+hue+', 100%, 80%)').css('--color3', 'var(--color2)');
 });
 
@@ -116,4 +116,3 @@ $('.button-bw').click(function(){
 </body>
 
 </html>
-
