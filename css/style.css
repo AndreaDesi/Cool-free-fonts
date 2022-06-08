@@ -11,6 +11,15 @@ Font
   src: url("../assets/font/Inter-Medium.ttf");
 }
 
+@font-face {
+  font-family: "Sporting";
+  src: url("../assets/font/Sporting_Grotesque-Bold_web.woff2");
+}
+
+.sporting {
+  font-family: "Sporting"
+}
+
 /*--------
 Global
 ----------*/
@@ -27,7 +36,7 @@ html {
   font-variant-ligatures: common-ligatures;
   font-variant-numeric: slashed-zero;
   cursor: crosshair;
-  font-family: "Inter", serif;
+  font-family: "Inter", sans-serif;
   letter-spacing: -0.04rem;
   margin-left: 3%;
   margin-right: 3%;
@@ -127,11 +136,11 @@ nav {
 }
 
 .about-text {
-  font-family: "Inter Medium", serif;
+  font-family: "Inter Medium", sans-serif;
 }
 
 .about-contacts {
-  font-family: "Inter Medium", serif;
+  font-family: "Inter Medium", sans-serif;
 }
 
 .about-contacts > div > p{
@@ -155,6 +164,8 @@ Selectors
 ----------*/
 .selectors {
   margin-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .selectors-dim{
@@ -170,7 +181,7 @@ button, input[type="submit"], input[type="reset"] {
 	cursor: pointer;
 	outline: inherit;
   margin-right: 20px;
-  font-family: "Inter Medium", serif;
+  font-family: "Inter Medium", sans-serif;
 }
 
 
@@ -207,7 +218,7 @@ Font Grid
   text-align: center;
   place-self: center;
   align-self: start;
-  font-family: "Inter Medium", serif;
+  font-family: "Inter Medium", sans-serif;
 }
 
 .font-text {
@@ -224,7 +235,7 @@ Font Grid
   grid-column: 1;
   text-align: left;
   align-self: end;
-  font-family: "Inter Medium", serif;
+  font-family: "Inter Medium", sans-serif;
 }
 
 .font-licence {
@@ -232,7 +243,7 @@ Font Grid
   grid-column: 2;
   text-align: right;
   align-self: end;
-  font-family: "Inter Medium", serif;
+  font-family: "Inter Medium", sans-serif;
 }
 
 .selectors-category > button {
@@ -303,9 +314,38 @@ Swiper style
 }
 
 .swiper-slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scheda {
+  margin-right: 7%;
+  margin-left: 7%;
+}
+
+.titolo{
   font-size: 96px;
   text-align: center;
-  display: flex;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.tre-colonne{
+  font-size: 12px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.glifi {
+  font-size: 96px;
+  text-align: center;
+  display: grid;
   align-items: center;
   justify-content: center;
 }
@@ -384,27 +424,22 @@ BW, random, switch, download buttons
 .download-btn{
   user-select: none;
   color: var(--color1);
-  background-color: var(--color2);
   position: absolute;
   z-index: 10000;
   bottom: 32px;
   right: 32px;
-  border: 1px solid black;
-  border-radius: 100px;
   height: 48px;
-  aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.4s;
   font-size: 20px;
-  line-height: 20px;
 }
 
-.download-btn:hover{
-  cursor: pointer;
-  transform: rotate(-135deg);
+.download-btn:hover {
+  opacity: 0.4;
+  transition: opacity 0.4s;
 }
+
 
 /*----------------------------------
 Responsive
@@ -417,6 +452,10 @@ Responsive
   /*--------
   Index
   ----------*/
+  .selectors {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .font-grid {
     display: block;
     }
