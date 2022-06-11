@@ -6,7 +6,7 @@ function randomInt(min, max) {
 
 $(document).ready(function(){
   let colore = randomInt(0, 255);
-  $('::selection').css('background', 'hsl('+colore+', 100%, 80%)');
+  $('::selection').css('background', 'hsl('+colore+', 100%, 70%)');
 });
 
 //Filtri front page
@@ -45,7 +45,7 @@ $('#all-btn').click(function(){
 
 $('.block').mouseenter(function(){
   let hue = randomInt(0, 255);
-  $(this).css('background-color', 'hsl('+hue+', 100%, 80%)');
+  $(this).css('background-color', 'hsl('+hue+', 100%, 70%)');
 }).mouseleave(function(){
   $(this).css('background-color', 'white');
 })
@@ -68,7 +68,7 @@ $('.about-btn').click(function(){
 //Sets --color3 to random number
 $(document).ready(function(){
   let colore = randomInt(0, 255);
-  $('html').css('--color3', 'hsl('+colore+', 100%, 80%)');
+  $('html').css('--color3', 'hsl('+colore+', 100%, 70%)');
 });
 
 
@@ -83,7 +83,7 @@ $('.swap-btn').click(function(){
 $('.rand-btn').click(function(){
   let hue = randomInt(0, 255);
 
-  $('html').css('--color2', 'hsl('+hue+', 100%, 80%)').css('--color3', 'var(--color2)');
+  $('html').css('--color2', 'hsl('+hue+', 100%, 70%)').css('--color3', 'var(--color2)');
 });
 
 //reset black and white
@@ -92,5 +92,5 @@ $('.bw-btn').click(function(){
   if ($('.content').hasClass('inv')) {
     $('.content').removeClass('inv').addClass('right');
   }
-  $('html').css('--color2', 'white').css('--color3', 'hsl('+ hue +', 100%, 80%)');;
+  $('html').css('--color2', 'white').css('--color3', 'hsl('+ hue +', 100%, 70%)');;
 });
