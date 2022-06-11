@@ -26,7 +26,7 @@ Global
 
 html {
   --color1: black;
-  --color2: white;
+  --color2: #FDFDFD;
   --color3: red;
   color: black;
   background-color: #FDFDFD;
@@ -77,7 +77,7 @@ Header
 ----------*/
 nav {
   position: fixed;
-  background-color: white;
+  background-color: #FDFDFD;
   top: 0;
   left: calc(3% - 2px);
   width: calc(94% + 4px);
