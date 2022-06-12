@@ -168,6 +168,10 @@ Selectors
   grid-template-columns: repeat(3, 1fr);
 }
 
+.selectors-btn {
+  margin-right: 15px;
+}
+
 .selectors-dim{
   opacity: 0.4 !important;
 }
@@ -319,13 +323,14 @@ Swiper style
 }
 
 .scheda {
-  margin-right: 7%;
-  margin-left: 7%;
+  margin-right: 5%;
+  margin-left: 5%;
+  align-content: center;
 }
 
 .titolo{
-  font-size: 96px;
-  line-height: calc(96px * 1.15);
+  font-size: calc(34px + (94 - 34) * ((100vw - 576px) / (2560 - 576)));
+  line-height: 1.3;
   text-align: center;
   display: grid;
   align-items: center;
@@ -349,22 +354,22 @@ Swiper style
 
 .two-column {
   column-count: 2;
-    font-size: calc(10px + (15 - 10) * ((100vw - 576px) / (2560 - 576)));
+    font-size: calc(7px + (15 - 7) * ((100vw - 576px) / (2560 - 576)));
 }
 
 .single-column {
   margin-top: 1rem;
-    font-size: calc(16px + (22 - 16) * ((100vw - 576px) / (2560 - 576)));
+    font-size: calc(12px + (22 - 12) * ((100vw - 576px) / (2560 - 576)));
 }
 
 .right-column {
     grid-column: 2;
-      font-size: calc(20px + (30 - 20) * ((100vw - 576px) / (2560 - 576)));
+      font-size: calc(14px + (30 - 14) * ((100vw - 576px) / (2560 - 576)));
 }
 
 .glifi {
-  font-size: 96px;
-  line-height: calc(96px * 1.5);
+  font-size: calc(34px + (94 - 34) * ((100vw - 576px) / (2560 - 576)));
+  line-height: 1.3;
   text-align: center;
   display: grid;
   align-items: center;
@@ -437,26 +442,21 @@ BW, random, switch, download buttons
 }
 
 .rand-btn{
+  transition: transform 0.4s;
+}
+
+.rand-btn:hover {
+  transition: transform 0.4s;
+  transform: rotate(45deg);
 }
 
 .bw-btn{
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(45deg, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%);
-  box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-  margin: 1px;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  border-left: 1px solid white;
-  border-bottom: 1px solid white;
-  transform: rotate(45deg);
   transition: transform 0.4s;
 }
 
 .bw-btn:hover{
-  transform: rotate(225deg);
+  transform: rotate(45deg);
+  transition: transform 0.4s;
 }
 
 .rand-btn, .swap-btn, .bw-btn{
