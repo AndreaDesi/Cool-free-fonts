@@ -326,25 +326,46 @@ Swiper style
 
 .titolo{
   font-size: 96px;
+  line-height: calc(96px * 1.15);
   text-align: center;
   display: grid;
   align-items: center;
   justify-content: center;
 }
 
-.tre-colonne{
+.specimen {
   font-size: 12px;
   text-align: left;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2em;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
+  height: 100%;
+}
+
+.left-column {
+  grid-column: 1;
+}
+
+.two-column {
+  column-count: 2;
+    font-size: calc(10px + (15 - 10) * ((100vw - 576px) / (2560 - 576)));
+}
+
+.single-column {
+  margin-top: 1rem;
+    font-size: calc(16px + (22 - 16) * ((100vw - 576px) / (2560 - 576)));
+}
+
+.right-column {
+    grid-column: 2;
+      font-size: calc(20px + (30 - 20) * ((100vw - 576px) / (2560 - 576)));
 }
 
 .glifi {
   font-size: 96px;
-  line-height: calc(96px * 1.2);
+  line-height: calc(96px * 1.5);
   text-align: center;
   display: grid;
   align-items: center;
