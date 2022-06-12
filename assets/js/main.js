@@ -85,6 +85,8 @@ $('.rand-btn').click(function(){
   let hue = randomInt(0, 255);
   $('.content').removeClass('inv').addClass('right');
   $('html').css('--color2', 'hsl('+hue+', 100%, 80%)').css('--color3', 'var(--color2)');
+  $('.swiper-button-prev').removeClass('inv').addClass('right');
+  $('.swiper-button-prev').removeClass('inv').addClass('right');
 });
 
 
