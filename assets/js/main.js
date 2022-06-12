@@ -68,7 +68,8 @@ $('.about-btn').click(function(){
 //Sets --color3 to random number
 $(document).ready(function(){
   let colore = randomInt(0, 255);
-  $('html').css('--color3', 'hsl('+colore+', 100%, 70%)');
+  $('html').css('--color3', 'hsl('+colore+', 100%, 80%)');
+  $('html').css('--color2', 'hsl('+colore+', 100%, 80%)');
 });
 
 
@@ -82,15 +83,25 @@ $('.swap-btn').click(function(){
 //random color
 $('.rand-btn').click(function(){
   let hue = randomInt(0, 255);
-
-  $('html').css('--color2', 'hsl('+hue+', 100%, 70%)').css('--color3', 'var(--color2)');
+  $('.content').removeClass('inv').addClass('right');
+  $('html').css('--color2', 'hsl('+hue+', 100%, 80%)').css('--color3', 'var(--color2)');
 });
 
-//reset black and white
+
+
+
 $('.bw-btn').click(function(){
-  let hue = randomInt(0, 255);
-  if ($('.content').hasClass('inv')) {
+
+  var color2 = $('html').css('--color2');
+
+  //Checks if --color2 is white and if colors are not swapped
+  if ((color2 == 'white') && ($('.content').hasClass('right'))){
+    $('.content').toggleClass('right').toggleClass('inv');
+    $('.swiper-button-prev').toggleClass('right').toggleClass('inv');
+    $('.swiper-button-next').toggleClass('right').toggleClass('inv');
+  //else resets white as bg color and --color2 to white 
+  } else {
     $('.content').removeClass('inv').addClass('right');
+    $('html').css('--color2', 'white').css('--color3', 'hsl('+ hue +', 100%, 80%)');;
   }
-  $('html').css('--color2', 'white').css('--color3', 'hsl('+ hue +', 100%, 70%)');;
 });

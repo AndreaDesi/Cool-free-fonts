@@ -26,7 +26,7 @@ Global
 
 html {
   --color1: black;
-  --color2: #FDFDFD;
+  --color2: white;
   --color3: red;
   color: black;
   background-color: #FDFDFD;
@@ -180,7 +180,6 @@ button, input[type="submit"], input[type="reset"] {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-  margin-right: 20px;
   font-family: "Inter Medium", sans-serif;
 }
 
@@ -396,6 +395,12 @@ BW, random, switch, download buttons
   transition: background-color 0.4s;
 }
 
+.utility-btn{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
 .buttons{
   position: absolute;
   z-index: 10000;
@@ -406,6 +411,7 @@ BW, random, switch, download buttons
   width: 120px;
   margin-top: 16px;
   grid-column-gap: 8px;
+  align-items: center;
 }
 
 .buttons > button{
@@ -423,7 +429,6 @@ BW, random, switch, download buttons
 
 .buttons:hover > button{
   opacity: 0.4;
-  transition: opacity 0.4s;
 }
 
 .buttons:hover > button:hover{
@@ -435,10 +440,26 @@ BW, random, switch, download buttons
 }
 
 .bw-btn{
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(45deg, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%);
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  margin: 1px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transform: rotate(45deg);
+  transition: transform 0.4s;
+}
+
+.bw-btn:hover{
+  transform: rotate(225deg);
 }
 
 .rand-btn, .swap-btn, .bw-btn{
-  height: 48px;
   aspect-ratio: 1;
   border-radius: 100%;
   margin: 0 !important;
@@ -446,22 +467,26 @@ BW, random, switch, download buttons
 }
 
 .download-btn{
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  margin: 0;
   user-select: none;
   color: var(--color1);
-  position: absolute;
-  z-index: 10000;
-  bottom: 32px;
-  right: 32px;
   height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
+  z-index: 1000;
 }
 
-.download-btn:hover {
-  opacity: 0.4;
-  transition: opacity 0.4s;
+.download-arrow{
+  transition: transform 0.4s;
+}
+
+.download-btn:hover > .download-arrow{
+  transform: rotate(-135deg);
 }
 
 
