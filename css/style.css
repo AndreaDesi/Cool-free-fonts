@@ -79,8 +79,7 @@ nav {
   position: fixed;
   background-color: #FDFDFD;
   top: 0;
-  left: calc(3% - 2px);
-  width: calc(94% + 4px);
+  width: calc(94% + 1px);
   height: 7vh;
   z-index: 10000 !important;
   border-bottom: 1px solid black;
@@ -500,6 +499,10 @@ Responsive
   /*--------
   Index
   ----------*/
+  .content {
+    height: calc(89vh - 0px);
+  }
+  
   .selectors {
     grid-template-columns: repeat(2, 1fr);
   }
