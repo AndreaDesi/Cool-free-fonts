@@ -53,12 +53,12 @@ $('.block').mouseenter(function(){
 //About
 
 $(document).ready(function(){
-  $('.about-text, .about-contacts').fadeOut(0);
+  $('#about-text, #about-contacts').fadeOut(0);
 })
 
 $('.about-btn').click(function(){
   $('nav').toggleClass('nav-extend');
-  $('.about-text, .about-contacts').fadeToggle('fast');
+  $('#about-text, #about-contacts').fadeToggle('fast');
 })
 
 

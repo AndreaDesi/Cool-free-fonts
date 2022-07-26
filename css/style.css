@@ -16,8 +16,8 @@ Font
   src: url("../assets/font/Sporting_Grotesque-Bold_web.woff2");
 }
 
-.sporting {
-  font-family: "Sporting"
+#sporting {
+  font-family: "Sporting";
 }
 
 /*--------
@@ -128,12 +128,16 @@ nav {
   content: "😎"
 }
 
+.about {
+  margin: calc(7vh + 3%) 0 0 0;
+}
+
 .about-btn {
   grid-column: 3;
   text-align: right;
 }
 
-.about-text {
+#about-text {
   font-family: "Inter Medium", sans-serif;
 }
 
@@ -141,19 +145,19 @@ nav {
   font-family: "Inter Medium", sans-serif;
 }
 
-.about-contacts > div > p{
+#bout-contacts > div > p{
   margin: 16px 0 0 0;
 }
 
-.about-contacts > div > ul > li{
+#about-contacts > div > ul > li{
   transition: opacity 0.4s;
 }
 
-.about-contacts > div > ul:hover > li{
+#about-contacts > div > ul:hover > li{
   opacity: 0.4;
 }
 
-.about-contacts > div > ul:hover > li:hover{
+#about-contacts > div > ul:hover > li:hover{
   opacity: 1;
 }
 
@@ -336,7 +340,6 @@ Swiper style
 }
 
 .specimen {
-  font-size: 12px;
   text-align: left;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
